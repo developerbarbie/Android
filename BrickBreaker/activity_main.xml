@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Left" />
+
+            <com.isaacson.josie.jisaacsonfinalproject.Game
+                android:id="@+id/gameMain"
+                android:layout_width="500dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:onClick="onGameScreenClick"
+                android:soundEffectsEnabled="true" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Right" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:text="SCORES"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+</FrameLayout>
